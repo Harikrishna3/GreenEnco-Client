@@ -1,6 +1,6 @@
 # SetUp 
 
-## Clone the repository:
+### Clone the repository:
 On the right-hand side of the page, click on the “Code” button.
 In the drop-down menu, select HTTPS to clone the repository.
 Click the “Copy” button to copy the URL of the repository to your clipboard.
@@ -8,21 +8,21 @@ Then, run the following command to clone the repository:
 
 git clone https://github.com/Harikrishna3/GreenEnco-Client
 
-## Navigate to the project directory:
+### Navigate to the project directory:
 
 cd //dir<dir>
 
-## Install dependencies:
+### Install dependencies:
 
 npm i
 
-## Start the development server by running the following command:
+### Start the development server by running the following command:
 
 npm start
 
 ----------------------------------------------------------------------------------
 
-## server Deployed At 
+# Server Deployed At 
 https://greenenco-api.onrender.com/
 
 The backend system serves as the core component of your application, responsible for handling data storage, retrieval, and processing. Its primary purpose is to support and enable the functionality of the entire application. It does so by providing a RESTful API that allows communication between the frontend and the data store.
