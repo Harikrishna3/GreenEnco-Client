@@ -1,4 +1,4 @@
-### SetUp 
+# SetUp 
 
 ## Clone the repository:
 On the right-hand side of the page, click on the “Code” button.
@@ -10,7 +10,7 @@ git clone https://github.com/Harikrishna3/GreenEnco-Client
 
 ## Navigate to the project directory:
 
-cd <dir>
+cd //dir<dir>
 
 ## Install dependencies:
 
