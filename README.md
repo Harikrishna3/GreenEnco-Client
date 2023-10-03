@@ -2,33 +2,33 @@ The backend system serves as the core component of your application, responsible
 
 
 ## Management:
- The backend system acts as a bridge between the frontend and the database. It handles CRUD (Create, Read, Update, Delete) operations on the application's data. This means it can create new records, retrieve existing ones, update data, and delete records when necessary.
+The backend system acts as a bridge between the frontend and the database. It handles CRUD (Create, Read, Update, Delete) operations on the application's data. This means it can create new records, retrieve existing ones, update data, and delete records when necessary.
 
 ## GET
 https://greenenco-api.onrender.com/details
 
-Gives all details of data
+Gives all the details of data
 
 --------------------------------------------------------------------------------
 
 ## GET
 https://greenenco-api.onrender.com/details/:id
 
-## Gives details of specified Id 
+## Gives details of specified ID
 
 ---------------------------------------------------------------------------------
 
 ## POST
 https://greenenco-api.onrender.com/details
 
-To Create or Add Data in database
+To Create or Add Data to a database
 
 ---------------------------------------------------------------------------------
 
 ## PATCH
 https://greenenco-api.onrender.com/details/:id
 
-To make a update in specified ID
+To make an update to a specified ID
 
 ---------------------------------------------------------------------------------
 
@@ -36,6 +36,7 @@ To make a update in specified ID
 https://greenenco-api.onrender.com/details/:id
 
 To delete data of specified ID
+
 ---------------------------------------------------------------------------------
 
 # Getting Started with Create React App
