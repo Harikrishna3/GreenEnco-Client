@@ -1,37 +1,38 @@
 The backend system serves as the core component of your application, responsible for handling data storage, retrieval, and processing. Its primary purpose is to support and enable the functionality of the entire application. It does so by providing a RESTful API that allows communication between the frontend and the data store.
 
 
-##Management: The backend system acts as a bridge between the frontend and the database. It handles CRUD (Create, Read, Update, Delete) operations on the application's data. This means it can create new records, retrieve existing ones, update data, and delete records when necessary.
+## Management:
+ The backend system acts as a bridge between the frontend and the database. It handles CRUD (Create, Read, Update, Delete) operations on the application's data. This means it can create new records, retrieve existing ones, update data, and delete records when necessary.
 
-##GET
+## GET
 https://greenenco-api.onrender.com/details
 
 Gives all details of data
 
 --------------------------------------------------------------------------------
 
-##GET
+## GET
 https://greenenco-api.onrender.com/details/:id
 
-##Gives details of specified Id 
+## Gives details of specified Id 
 
 ---------------------------------------------------------------------------------
 
-##POST
+## POST
 https://greenenco-api.onrender.com/details
 
 To Create or Add Data in database
 
 ---------------------------------------------------------------------------------
 
-##PATCH
+## PATCH
 https://greenenco-api.onrender.com/details/:id
 
 To make a update in specified ID
 
 ---------------------------------------------------------------------------------
 
-##DELETE
+## DELETE
 https://greenenco-api.onrender.com/details/:id
 
 To delete data of specified ID
