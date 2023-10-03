@@ -21,6 +21,10 @@ npm i
 npm start
 
 ----------------------------------------------------------------------------------
+
+## server Deployed At 
+https://greenenco-api.onrender.com/
+
 The backend system serves as the core component of your application, responsible for handling data storage, retrieval, and processing. Its primary purpose is to support and enable the functionality of the entire application. It does so by providing a RESTful API that allows communication between the frontend and the data store.
 
 
