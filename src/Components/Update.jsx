@@ -36,6 +36,7 @@ const Update = ({ setid, onUpdate }) => {
         <table className="table">
           <thead>
             <tr>
+              <th>Update</th>
               <th>Month</th>
               <th>PVSYST GHI</th>
               <th>PVSYST GTI</th>

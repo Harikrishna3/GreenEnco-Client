@@ -29,7 +29,7 @@ function App() {
 
   //fatchs the data of specified Id and sends to update Item
   const onUpdate = () => {
-    getData();
+    // getData();
 
     // assignmentData &&  assignmentData.forEach((dataa) => {
     //     if (dataa._id === iiid) {
@@ -47,7 +47,7 @@ function App() {
           setData(data);
           console.log(data);
         });
-    data && routeChange();
+    iiid && routeChange();
   };
 
   //changes the route to update item page
