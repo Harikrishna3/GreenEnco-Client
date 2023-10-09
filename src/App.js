@@ -28,7 +28,7 @@ function App() {
   };
 
   //fatchs the data of specified Id and sends to update Item
-  const onUpdate = () => {
+  const onUpdate = (id) => {
     // getData();
 
     // assignmentData &&  assignmentData.forEach((dataa) => {
@@ -38,8 +38,9 @@ function App() {
     //       console.log(data);
     //     }
     // })
-    iiid &&
-      fetch(`https://greenenco-api.onrender.com/details/${iiid}`, {
+    // iiid &&
+    setData();
+      fetch(`https://greenenco-api.onrender.com/details/${id}`, {
         method: "GET",
       })
         .then((res) => res.json())
@@ -47,7 +48,7 @@ function App() {
           setData(data);
           console.log(data);
         });
-    iiid && routeChange();
+    //  routeChange();
   };
 
   //changes the route to update item page

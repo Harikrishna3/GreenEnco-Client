@@ -39,10 +39,10 @@ const UpdateItem = ({ idprop, dataprop, setData, setIiid }) => {
   }
 
   //to Update the data of specified ID
-  const handleUpDate = async (idprop) => {
+  const handleUpDate = async (ID) => {
 
     await axios
-      .patch(`https://greenenco-api.onrender.com/details/${idprop}`, {
+      .patch(`https://greenenco-api.onrender.com/details/${ID}`, {
         Month,
         PVSYST_GHI,
         PVSYST_GTI,
@@ -294,7 +294,7 @@ const UpdateItem = ({ idprop, dataprop, setData, setIiid }) => {
         <br />
         <button
           className="button"
-          onClick={() => handleUpDate(idprop)}
+          onClick={() => handleUpDate(dataprop._id)}
         >
           Update</button>
         <div>

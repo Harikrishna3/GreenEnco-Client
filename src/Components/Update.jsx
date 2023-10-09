@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 const Update = ({ setid, onUpdate }) => {
   const [assignmentData, setAssignmentData] = useState();
-
+  const navigate = useNavigate();
   //fatch the data
   const getData = () => {
 
@@ -22,12 +23,15 @@ const Update = ({ setid, onUpdate }) => {
     getData();
   }, []);
 
-
+  const routeChange = () => {
+    let path = `/updateItem`;
+    navigate(path);
+  };
   // handles Updata
   const handleUpdate = (id) => {
-    setid(id);
-    onUpdate();
-    // routeChange();
+    // setid(id);
+    onUpdate(id);
+    routeChange();
   }
   return (
     <>
