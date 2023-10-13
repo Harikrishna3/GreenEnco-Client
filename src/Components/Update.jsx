@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-const Update = ({ setid, onUpdate }) => {
-  const [assignmentData, setAssignmentData] = useState();
-  const navigate = useNavigate();
+const Update = ({  onUpdate }) => {
+  const [assignmentData, setAssignmentData] = useState(); // to save the data
+  const navigate = useNavigate();// to navigate 
+
   //fatch the data
   const getData = () => {
 
@@ -18,24 +19,26 @@ const Update = ({ setid, onUpdate }) => {
       })
   }
 
-  //fetch the data
+  //to call getData funt when page is loaded 
   useEffect(() => {
     getData();
   }, []);
 
+  //change the root
   const routeChange = () => {
     let path = `/updateItem`;
     navigate(path);
   };
+
   // handles Updata
   const handleUpdate = (id) => {
-    // setid(id);
-    onUpdate(id);
-    routeChange();
+    onUpdate(id); //calls on update fun in app.jsx
+    routeChange(); 
   }
   return (
     <>
       <h1>Update</h1>
+      {/* table */}
       <div className="table-container">
         <table className="table">
           <thead>

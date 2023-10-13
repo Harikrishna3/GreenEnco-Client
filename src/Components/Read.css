@@ -30,6 +30,7 @@
   border: 1px solid #ccc;
 }
 
+
 /* Style the table on smaller screens */
 @media (max-width: 600px) {
   .table {

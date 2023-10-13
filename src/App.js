@@ -8,54 +8,25 @@ import Delete from "./Components/Delete";
 import Update from "./Components/Update";
 import UpdateItem from "./Components/UpdateItem";
 import { useState } from "react";
+import Charts from "./Components/Charts";
 
 function App() {
-  const [iiid, setIiiD] = useState();
-  const [data, setData] = useState();
-  const navigate = useNavigate();
+  const [data, setData] = useState(); // to save the fetched data
 
-  const [assignmentData, setAssignmentData] = useState();
-
-  //to fetch the data
-  const getData = async () => {
-    await fetch("https://greenenco-api.onrender.com/details", {
+  //fatchs the data of specified Id and sends to update Item
+  const onUpdate = (id) => {
+    setData();
+    fetch(`https://greenenco-api.onrender.com/details/${id}`, {
       method: "GET",
     })
       .then((res) => res.json())
       .then((data) => {
-        setAssignmentData(data);
+        setData(data);
+        console.log(data);
       });
+
   };
 
-  //fatchs the data of specified Id and sends to update Item
-  const onUpdate = (id) => {
-    // getData();
-
-    // assignmentData &&  assignmentData.forEach((dataa) => {
-    //     if (dataa._id === iiid) {
-    //       //     setDataUpdate(data)
-    //       setData(dataa)
-    //       console.log(data);
-    //     }
-    // })
-    // iiid &&
-    setData();
-      fetch(`https://greenenco-api.onrender.com/details/${id}`, {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setData(data);
-          console.log(data);
-        });
-    //  routeChange();
-  };
-
-  //changes the route to update item page
-  const routeChange = () => {
-    let path = `/updateItem`;
-    navigate(path);
-  };
   return (
     <div className="App">
       <SideBar />
@@ -63,26 +34,15 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/create" element={<Create />} />
         <Route path="/read" element={<Read />} />
-        <Route
-          path="/update"
-          element={<Update setid={setIiiD} onUpdate={onUpdate} />}
-        />
+        <Route path="/update" element={<Update onUpdate={onUpdate} />} />
         {data && (
           <Route
             path="/updateItem"
-            element={
-              data && (
-                <UpdateItem
-                  idprop={iiid}
-                  dataprop={data}
-                  setData={setData}
-                  setIiid={setIiiD}
-                />
-              )
-            }
+            element={data && <UpdateItem dataprop={data} setData={setData} />}
           />
         )}
         <Route path="/delete" element={<Delete />} />
+        <Route path="/barchart" element={<Charts />} />
       </Routes>
     </div>
   );

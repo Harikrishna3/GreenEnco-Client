@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const Delete = () => {
-  const [assignmentData, setAssignmentData] = useState();
+  const [assignmentData, setAssignmentData] = useState();// to store the data
 
   //fetchs the data
   const getData = () => {
@@ -18,6 +18,8 @@ const Delete = () => {
 
       })
   }
+
+  //calls function after rendered
   useEffect(() => {
     getData();
   }, [assignmentData]);

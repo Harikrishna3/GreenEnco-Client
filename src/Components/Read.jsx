@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Read.css'
 
 const Read = () => {
@@ -15,14 +16,25 @@ const Read = () => {
       });
   };
 
-  //fetches the data
+  //calls the function after rendered
   useEffect(() => {
     getData();
   }, []);
 
   return (
     <>
+    <div 
+    style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent:"center",
+  }}
+>
       <h1>Read</h1>
+      <Link to={"/barchart"}>
+      <button style={{marginLeft:"10rem",padding:"10px",color:"white", backgroundColor:"#3d5aff"}}>Show in charts</button>
+      </Link>
+    </div>
       <div className="table-container">
         <table className="table">
           <thead>

@@ -4,13 +4,13 @@ import './SideBar.css';
 
 
 function SideBar() {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false);//Toggel the sidebar
   
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <>
-
+ 
       <div className='navbar'>
         <Link to='#' className='menu-bars'>
           <h1 onClick={showSidebar}>=</h1>

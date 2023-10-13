@@ -2,8 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router";
 
-const UpdateItem = ({ idprop, dataprop, setData, setIiid }) => {
+const UpdateItem = ({ dataprop, setData }) => {
   const navigate = useNavigate();
+
   const [Month, setMonth] = useState("");
   const [PVSYST_GHI, setPVSYST_GHI] = useState();
   const [PVSYST_GTI, setPVSYST_GTI] = useState();
@@ -26,11 +27,10 @@ const UpdateItem = ({ idprop, dataprop, setData, setIiid }) => {
   const [Excess_Shortfall_KWh, setExcess_Shortfall_KWh] = useState();
   const [Excess_Shortfall__in_percentage, setExcess_Shortfall__in_percentage] = useState();
 
+  //loads on the rendering the page
   useEffect(() => {
     keepReady();
   }, [])
-  // console.log(dataprop);
-  // console.log(idprop);
 
   //to change the route
   const routeChange = () => {
@@ -88,14 +88,13 @@ const UpdateItem = ({ idprop, dataprop, setData, setIiid }) => {
         setExcess_Shortfall_KWh();
         setExcess_Shortfall__in_percentage();
         console.log("Updated" + data);
-        setData();
-        setIiid();
-        routeChange();
+        setData();//clear the data after update
+        routeChange();//back to Update Page
         // }
       });
   }
 
-  // data stored in input field
+  // To store the data in input field
   const keepReady = () => {
     setMonth(dataprop.Month)
     setPVSYST_GHI(dataprop.PVSYST_GHI)

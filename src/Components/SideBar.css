@@ -28,6 +28,7 @@
 .nav-menu.active {
   left: 0;
   transition: 350ms;
+  z-index: 1;
 }
 
 .nav-text {
@@ -60,9 +61,6 @@
   border-radius: 4px;
 }
 
-/* .nav-text a:hover {
-    background-color: #1a83ff;
-  } */
 
 .nav-menu-items {
   width: 100%;

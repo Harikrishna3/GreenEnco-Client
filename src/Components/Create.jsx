@@ -1,5 +1,4 @@
-// import { useState } from "react";
-// import axios from 'axios';
+
 import {
   useNavigate,
 
@@ -8,27 +7,6 @@ import { useFormik } from 'formik';
 import './Create.css'
 
 const Create = () => {
-  // const [Month, setMonth] = useState("");
-  // const [PVSYST_GHI, setPVSYST_GHI] = useState();
-  // const [PVSYST_GTI, setPVSYST_GTI] = useState();
-  // const [PVSYST_Energy, setPVSYST_Energy] = useState();
-  // const [Contractual_Energy, setContractual_Energy] = useState();
-  // const [Actual_GTI, setActual_GTI] = useState();
-  // const [Actual_GHI, setActual_GHI] = useState();
-  // const [PVSyst_GTI_vs_Actual_GTI, setPVSyst_GTI_vs_Actual_GTI] = useState();
-  // const [PVSyst_GHI_vs_Actual_GHI, setPVSyst_GHI_vs_Actual_GHI] = useState();
-  // const [PVSyst_Energy_vs_Contractual_Energy, setPVSyst_Energy_vs_Contractual_Energy] = useState();
-  // const [T_Cell_Avg_C, setT_Cell_Avg_C] = useState();
-  // const [Actual_Inverter_Energy_KWh, setActual_Inverter_Energy_KWh] = useState();
-  // const [Actual_Export_Energy_KWh, setActual_Export_Energy_KWh] = useState();
-  // const [Actual_Import_Energy_KWh, setActual_Import_Energy_KWh] = useState();
-  // const [AC_loss_per, setAC_loss_per] = useState();
-  // const [Net_Energy, setNet_Energy] = useState();
-  // const [Normalised_Energy_KWh, setNormalised_Energy_KWh] = useState();
-  // const [Excess_Shortfall_Normalised_KWh, setExcess_Shortfall_Normalised_KWh] = useState();
-  // const [Excess_Shortfall_Normalised_in_percentage, setExcess_Shortfall_Normalised_in_percentage] = useState();
-  // const [Excess_Shortfall_KWh, setExcess_Shortfall_KWh] = useState();
-  // const [Excess_Shortfall__in_percentage, setExcess_Shortfall__in_percentage] = useState();
 
   // Define initial form values
   const initialValues = {
@@ -106,7 +84,7 @@ const Create = () => {
       // Handle form submission here
       console.log(values);
       try {
-        // Make an HTTP POST request to the specified URL
+        // Make an HTTP POST request to the specified URL like http://localhost:3500/deltails
         const response = await fetch('https://greenenco-api.onrender.com/details', {
           method: 'POST',
           headers: {
@@ -141,74 +119,10 @@ const Create = () => {
     navigate(path);
   }
 
-  // const handleAdd = () => {
-  //   handleSubmit();
-  //   routeChange();
-  // }
-
-  // const handleSubmit = () => {
-  //   console.log(Month);
-
-
-  //   var formData = new FormData();
-  //   formData.append("Month", Month);
-  //   formData.append("PVSYST_GHI", PVSYST_GHI);
-  //   formData.append("PVSYST_GTI", PVSYST_GTI);
-  //   formData.append("PVSYST_Energy", PVSYST_Energy);
-  //   formData.append("Contractual_Energy", Contractual_Energy);
-  //   formData.append("Actual_GTI", Actual_GTI);
-  //   formData.append("Actual_GHI", Actual_GHI);
-  //   formData.append("PVSyst_GTI_vs_Actual_GTI", PVSyst_GTI_vs_Actual_GTI);
-  //   formData.append("PVSyst_GHI_vs_Actual_GHI", PVSyst_GHI_vs_Actual_GHI);
-  //   formData.append("PVSyst_Energy_vs_Contractual_Energy", PVSyst_Energy_vs_Contractual_Energy);
-  //   formData.append("T_Cell_Avg_C", T_Cell_Avg_C);
-  //   formData.append("Actual_Inverter_Energy_KWh", Actual_Inverter_Energy_KWh);
-  //   formData.append("Actual_Export_Energy_KWh", Actual_Export_Energy_KWh);
-  //   formData.append("Actual_Import_Energy_KWh", Actual_Import_Energy_KWh);
-  //   formData.append("AC_loss_per", AC_loss_per);
-  //   formData.append("Net_Energy", Net_Energy);
-  //   formData.append("Normalised_Energy_KWh", Normalised_Energy_KWh);
-  //   formData.append("Excess_Shortfall_Normalised_KWh", Excess_Shortfall_Normalised_KWh);
-  //   formData.append("Excess_Shortfall_Normalised_in_percentage", Excess_Shortfall_Normalised_in_percentage);
-  //   formData.append("Excess_Shortfall_KWh", Excess_Shortfall_KWh);
-  //   formData.append("Excess_Shortfall__in_percentage", Excess_Shortfall__in_percentage);
-  //   for (var key of formData.entries()) {
-  //     console.log(key[0] + ', ' + key[1])
-  //   }
-
-  //   axios.post("https://greenenco-api.onrender.com/details", formData, {
-  //     headers: {
-  //       "Content-Type": "multipart/form-data",
-  //     },
-  //   });
-
-  //   setMonth("");
-  //   setPVSYST_GHI();
-  //   setPVSYST_GTI();
-  //   setPVSYST_Energy();
-  //   setContractual_Energy();
-  //   setActual_GTI();
-  //   setActual_GHI();
-  //   setPVSyst_GTI_vs_Actual_GTI();
-  //   setPVSyst_GHI_vs_Actual_GHI();
-  //   setPVSyst_Energy_vs_Contractual_Energy();
-  //   setT_Cell_Avg_C();
-  //   setActual_Inverter_Energy_KWh();
-  //   setActual_Export_Energy_KWh();
-  //   setActual_Import_Energy_KWh();
-  //   setAC_loss_per();
-  //   setNet_Energy();
-  //   setNormalised_Energy_KWh();
-  //   setExcess_Shortfall_Normalised_KWh();
-  //   setExcess_Shortfall_Normalised_in_percentage();
-  //   setExcess_Shortfall_KWh();
-  //   setExcess_Shortfall__in_percentage();
-  // };
-
   return (
     <div id="body">
       <form onSubmit={formik.handleSubmit}>
-        <div id="form">
+        <div id="form" >
           <h1>Create</h1>
           <label htmlFor="Month">Month:</label>
           {formik.touched.Month && formik.errors.Month ? (
@@ -482,7 +396,7 @@ const Create = () => {
               onChange={formik.handleChange}
             />
             <br />
-            <br /> 
+            <br />
             <button className='button' type="submit">Submit</button>
             <div>
               <br />
